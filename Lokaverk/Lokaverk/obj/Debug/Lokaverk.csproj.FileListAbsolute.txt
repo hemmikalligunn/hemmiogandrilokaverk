@@ -10,3 +10,9 @@ H:\lokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.pdb
 H:\lokaverktolvubraut\lokaverktolvubraut2\hemmiogandrilokaverk\Lokaverk\Lokaverk\bin\Debug\Lokaverk.exe.config
 H:\lokaverktolvubraut\lokaverktolvubraut2\hemmiogandrilokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.exe
 H:\lokaverktolvubraut\lokaverktolvubraut2\hemmiogandrilokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.pdb
+H:\lokaverktolvubraut\lokaverktolvubraut2\hemmiogandrilokaverk\Lokaverk\Lokaverk\bin\Debug\Lokaverk.exe
+H:\lokaverktolvubraut\lokaverktolvubraut2\hemmiogandrilokaverk\Lokaverk\Lokaverk\bin\Debug\Lokaverk.pdb
+H:\lokaverktolvubraut\lokaverktolvubraut2\hemmiogandrilokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.csprojResolveAssemblyReference.cache
+H:\lokaverktolvubraut\lokaverktolvubraut2\hemmiogandrilokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.Form1.resources
+H:\lokaverktolvubraut\lokaverktolvubraut2\hemmiogandrilokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.Properties.Resources.resources
+H:\lokaverktolvubraut\lokaverktolvubraut2\hemmiogandrilokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.csproj.GenerateResource.Cache
