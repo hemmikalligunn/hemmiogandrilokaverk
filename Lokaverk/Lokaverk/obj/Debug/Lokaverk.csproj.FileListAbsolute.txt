@@ -1,0 +1,9 @@
+H:\lokaverk\Lokaverk\Lokaverk\bin\Debug\Lokaverk.exe.config
+H:\lokaverk\Lokaverk\Lokaverk\bin\Debug\Lokaverk.exe
+H:\lokaverk\Lokaverk\Lokaverk\bin\Debug\Lokaverk.pdb
+H:\lokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.csprojResolveAssemblyReference.cache
+H:\lokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.Form1.resources
+H:\lokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.Properties.Resources.resources
+H:\lokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.csproj.GenerateResource.Cache
+H:\lokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.exe
+H:\lokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.pdb
