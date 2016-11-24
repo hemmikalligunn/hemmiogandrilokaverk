@@ -59,6 +59,35 @@ namespace Lokaverk
 
             //MapDesign
 
+            StartingPos(31, 20);
+
+            Tré1(32, 10);
+            Tré1(20, 25);
+            Tré1(23, 5);
+            Tré1(4, 3);
+            Tré1(11, 6);
+            Tré1(16, 1);
+            Tré1(16, 8);
+            Tré1(14, 21);
+            Tré1(9, 26);
+            Tré1(3, 25);
+            Tré1(8, 0);
+            Tré1(1, 9);
+            Tré1(1, 15);
+            Tré2(11, 2);
+            Tré1(5, 30);
+            Tré1(15, 28);
+            Tré2(46, 2);
+            Tré2(48, 10);
+            Tré2(44, 21);
+            Tré2(1, 0);
+            Tré2(3, 20);
+            Tré2(6, 23);
+            Tré2(19, 19);
+            Tré2(25, 12);
+            Tré2(34, 25);
+            Tré2(6, 7);
+
         }
 
         private void Form1_Click(object sender, EventArgs e)
