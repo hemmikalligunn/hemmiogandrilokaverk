@@ -7,3 +7,6 @@ H:\lokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.Properties.Resources.resources
 H:\lokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.csproj.GenerateResource.Cache
 H:\lokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.exe
 H:\lokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.pdb
+H:\lokaverktolvubraut\lokaverktolvubraut2\hemmiogandrilokaverk\Lokaverk\Lokaverk\bin\Debug\Lokaverk.exe.config
+H:\lokaverktolvubraut\lokaverktolvubraut2\hemmiogandrilokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.exe
+H:\lokaverktolvubraut\lokaverktolvubraut2\hemmiogandrilokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.pdb
