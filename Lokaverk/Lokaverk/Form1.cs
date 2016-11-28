@@ -23,7 +23,7 @@ namespace Lokaverk
         public Form1()
         {
             InitializeComponent();
-            CreateWorld1();
+            
         }
 
         public void CreateWorld1()
@@ -77,7 +77,7 @@ namespace Lokaverk
             Tré1(1, 15);
             Tré2(11, 2);
             Tré1(5, 30);
-            Tré1(15, 28);
+            Tré3(15, 28);
             Tré2(46, 2);
             Tré2(48, 10);
             Tré2(44, 21);
@@ -207,5 +207,23 @@ namespace Lokaverk
 
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            label1.Visible = true;
+            label2.Visible = true;
+            label3.Visible = true;
+            label4.Visible = true;
+            label5.Visible = true;
+            label6.Visible = true;
+            button1.Visible = false;
+            button2.Visible = false;
+            button3.Visible = false;
+            bits.Visible = true;
+            
+            CreateWorld1();
+            
+        }
+
     }
 }
