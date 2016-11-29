@@ -286,7 +286,7 @@ namespace Lokaverk
 
                         }
                     }
-                    currentX = currentX + 1;
+                    currentX = currentX - 1;
                     for (int i = 0; i < World.Length; i++)
                     {
                         if (World[i].Name == currentX + ":" + currentY)
@@ -308,7 +308,7 @@ namespace Lokaverk
                         }
                     }
 
-                    currentY = currentY + 1;
+                    currentX = currentX + 1;
                     for (int i = 0; i < World.Length; i++)
                     {
                         if (World[i].Name == currentX + ":" + currentY)
@@ -319,6 +319,7 @@ namespace Lokaverk
                     }
                     return true;
                 }
+                
 
             return base.ProcessCmdKey(ref msg, keyData);
         }
