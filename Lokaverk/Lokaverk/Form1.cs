@@ -257,17 +257,66 @@ namespace Lokaverk
                 }
                 if (keyData == Keys.Down)
                 {
+                    for (int i = 0; i < World.Length; i++)
+                    {
+                        if (World[i].Name == currentX + ":" + currentY)
+                        {
+                            World[i].BackColor = Color.LightGreen;
+
+                        }
+                    }
                     currentY = currentY + 1;
+                    for (int i = 0; i < World.Length; i++)
+                    {
+                        if (World[i].Name == currentX + ":" + currentY)
+                        {
+                            World[i].BackColor = Color.Black;
+
+                        }
+                    }
                     return true;
                 }
                 if (keyData == Keys.Left)
                 {
-                    currentX = currentX - 1;
+                    for (int i = 0; i < World.Length; i++)
+                    {
+                        if (World[i].Name == currentX + ":" + currentY)
+                        {
+                            World[i].BackColor = Color.LightGreen;
+
+                        }
+                    }
+                    currentX = currentX + 1;
+                    for (int i = 0; i < World.Length; i++)
+                    {
+                        if (World[i].Name == currentX + ":" + currentY)
+                        {
+                            World[i].BackColor = Color.Black;
+
+                        }
+                    }
                     return true;
                 }
                 if (keyData == Keys.Right)
                 {
+                    for (int i = 0; i < World.Length; i++)
+                    {
+                        if (World[i].Name == currentX + ":" + currentY)
+                        {
+                            World[i].BackColor = Color.LightGreen;
+
+                        }
+                    }
+
                     currentY = currentY + 1;
+                    for (int i = 0; i < World.Length; i++)
+                    {
+                        if (World[i].Name == currentX + ":" + currentY)
+                        {
+                            World[i].BackColor = Color.Black;
+
+                        }
+                    }
                     return true;
                 }
 

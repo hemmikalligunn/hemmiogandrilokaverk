@@ -25,3 +25,12 @@ H:\lokaverktolvubraut\hemmiogandrilokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.
 H:\lokaverktolvubraut\hemmiogandrilokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.Form1.resources
 H:\lokaverktolvubraut\hemmiogandrilokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.Properties.Resources.resources
 H:\lokaverktolvubraut\hemmiogandrilokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.csproj.GenerateResource.Cache
+H:\hemmiogandrilokaverk\Lokaverk\Lokaverk\bin\Debug\Lokaverk.exe.config
+H:\hemmiogandrilokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.exe
+H:\hemmiogandrilokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.pdb
+H:\hemmiogandrilokaverk\Lokaverk\Lokaverk\bin\Debug\Lokaverk.exe
+H:\hemmiogandrilokaverk\Lokaverk\Lokaverk\bin\Debug\Lokaverk.pdb
+H:\hemmiogandrilokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.csprojResolveAssemblyReference.cache
+H:\hemmiogandrilokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.Form1.resources
+H:\hemmiogandrilokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.Properties.Resources.resources
+H:\hemmiogandrilokaverk\Lokaverk\Lokaverk\obj\Debug\Lokaverk.csproj.GenerateResource.Cache
