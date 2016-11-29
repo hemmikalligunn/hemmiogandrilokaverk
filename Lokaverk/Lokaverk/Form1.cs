@@ -47,11 +47,17 @@ namespace Lokaverk
                 World[i].Name = (X + ":" + Y);
                 World[i].BackColor = Color.LightGreen;
                 World[i].ForeColor = World[i].BackColor;
-
-
-                if (World[i].Name == currentX +":" + currentY)
+                if (World[i].Name == 17 + ":" + 16)
                 {
                     World[i].BackColor = Color.Black;
+                    World[i].Text = "gamall";
+                    World[i].ForeColor = World[i].BackColor;
+                }
+
+                if (World[i].Name == currentX + ":" + currentY)
+                {
+                    World[i].BackColor = Color.Black;
+
                 }
                
                 x = x + 15;
@@ -114,6 +120,30 @@ namespace Lokaverk
             Button tempButton = (Button)sender;
 
             bits.Text = tempButton.Name;
+            if (tempButton.BackColor == Color.DarkGreen)
+            {
+                 RTB.Text = "Tré";                   
+            }
+            if (tempButton.BackColor == Color.LightGreen)
+            {
+                RTB.Text = "grass";
+            }
+            if (tempButton.Text == "gamall")
+            {
+                RTB.Text = "Gamall kall sem virðist vera í vanda";
+            }
+            if (tempButton.BackColor == Color.FromArgb(69, 36, 14) || tempButton.BackColor == Color.FromArgb(78, 47, 18) || tempButton.BackColor == Color.FromArgb(86, 51, 20))
+            {
+                RTB.Text = "Lítill kofi";
+            }
+            if (tempButton.BackColor == Color.Black && tempButton.Text == "")
+            {
+                RTB.Text = "Þú";
+            }
+                        
+
+            
+            
         
         }
         //MapDesignTools
@@ -225,6 +255,7 @@ namespace Lokaverk
             button2.Visible = false;
             button3.Visible = false;
             bits.Visible = true;
+            RTB.Visible = true;
             
             CreateWorld1();
             
@@ -250,7 +281,8 @@ namespace Lokaverk
                     for (int i = 0; i < World.Length; i++)
                     {
                         if (World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.DarkGreen || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(86, 51, 20)
-                            || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(78, 47, 18) || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(69, 36, 14))
+                            || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(78, 47, 18) || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(69, 36, 14)
+                            || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.Black)
                         {
                             currentY = currentY + 1;
                         }
@@ -283,7 +315,8 @@ namespace Lokaverk
                     for (int i = 0; i < World.Length; i++)
                     {
                         if (World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.DarkGreen || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(86, 51, 20)
-                            || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(78, 47, 18) || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(69, 36, 14))
+                            || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(78, 47, 18) || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(69, 36, 14)
+                            || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.Black)
                         {
                             currentY = currentY - 1;
                         }
@@ -316,7 +349,8 @@ namespace Lokaverk
                     for (int i = 0; i < World.Length; i++)
                     {
                         if (World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.DarkGreen || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(86, 51, 20)
-                            || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(78, 47, 18) || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(69, 36, 14))
+                            || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(78, 47, 18) || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(69, 36, 14)
+                            || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.Black)
                         {
                             currentX = currentX + 1;
                         }
@@ -350,7 +384,8 @@ namespace Lokaverk
                     for (int i = 0; i < World.Length; i++)
                     {
                         if (World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.DarkGreen || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(86, 51, 20)
-                            || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(78, 47, 18) || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(69, 36, 14))
+                            || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(78, 47, 18) || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(69, 36, 14)
+                             || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.Black)
                         {
                             currentX = currentX - 1;
                         }
