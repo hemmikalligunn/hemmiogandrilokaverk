@@ -14,8 +14,11 @@ namespace Lokaverk
     public partial class Form1 : Form
     {
         int teljari1 = 0, teljari2 = 0;
-        int currentX = 0;
-        int currentY = 0;
+        int currentX = 31;
+        int currentY = 20;
+        int X = 0;
+        int Y = 0;
+        
         //sdfjklkasdfsdajflsd
 
         Button[] World = new Button[1984];
@@ -33,7 +36,7 @@ namespace Lokaverk
 
             for (int i = 0; i < World.Length; i++)
             {
-                currentX++;
+                X++;
 
                 teljari1++;
 
@@ -41,26 +44,36 @@ namespace Lokaverk
                 World[i] = new Button();
                 World[i].Size = new Size(15, 15);
                 World[i].Location = new Point(x, y);
-                World[i].Name = (currentX + ":" + currentY);
+                World[i].Name = (X + ":" + Y);
                 World[i].BackColor = Color.LightGreen;
+                World[i].ForeColor = World[i].BackColor;
+
+
+                if (World[i].Name == currentX +":" + currentY)
+                {
+                    World[i].BackColor = Color.Black;
+                }
                
                 x = x + 15;
                 if (teljari1 == 62)
                 {
                     teljari2++;
-                    currentX = 0;
+                    X = 0;
                     x = 3;
                     y = y + 15;
                     teljari1 = 0;
-                    currentY++;
+                    Y++;
                 }
                 this.World[i].Click += Form1_Click;
                 this.Controls.Add(World[i]);
+
+              
             }
+
 
             //MapDesign
 
-            StartingPos(31, 20);
+            
 
             Tré1(32, 10);
             Tré1(20, 25);
@@ -105,16 +118,8 @@ namespace Lokaverk
         }
         //MapDesignTools
 
-        public void StartingPos(int x, int y)
-        {
-            for (int i = 0; i < World.Length; i++)
-            {
-                if (World[i].Name == x + ":" + y)
-                {
-                    World[i].BackColor = Color.Black;
-                }
-            }
-        }
+       
+
 
         //tré
         public void Tré1(int x, int y)
@@ -223,6 +228,50 @@ namespace Lokaverk
             
             CreateWorld1();
             
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+                //capture up arrow key
+                if (keyData == Keys.Up)
+                {
+                   
+                    for (int i = 0; i < World.Length; i++)
+                    {
+                        if (World[i].Name == currentX + ":" + currentY)
+                        {
+                            World[i].BackColor = Color.LightGreen;
+                            
+                        }
+                    }
+                    currentY = currentY - 1;
+
+                    for (int i = 0; i < World.Length; i++)
+                    {
+                        if (World[i].Name == currentX + ":" + currentY)
+                        {
+                            World[i].BackColor = Color.Black;
+
+                        }
+                    }
+                }
+                if (keyData == Keys.Down)
+                {
+                    currentY = currentY + 1;
+                    return true;
+                }
+                if (keyData == Keys.Left)
+                {
+                    currentX = currentX - 1;
+                    return true;
+                }
+                if (keyData == Keys.Right)
+                {
+                    currentY = currentY + 1;
+                    return true;
+                }
+
+            return base.ProcessCmdKey(ref msg, keyData);
         }
 
     }
