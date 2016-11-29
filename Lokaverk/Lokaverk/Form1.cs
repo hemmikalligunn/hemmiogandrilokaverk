@@ -232,7 +232,7 @@ namespace Lokaverk
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-                //capture up arrow key
+                //upp
                 if (keyData == Keys.Up)
                 {
                    
@@ -246,6 +246,16 @@ namespace Lokaverk
                     }
                     currentY = currentY - 1;
 
+
+                    for (int i = 0; i < World.Length; i++)
+                    {
+                        if (World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.DarkGreen || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(86, 51, 20)
+                            || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(78, 47, 18) || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(69, 36, 14))
+                        {
+                            currentY = currentY + 1;
+                        }
+
+                    }
                     for (int i = 0; i < World.Length; i++)
                     {
                         if (World[i].Name == currentX + ":" + currentY)
@@ -253,8 +263,11 @@ namespace Lokaverk
                             World[i].BackColor = Color.Black;
 
                         }
+
                     }
+                    return true;
                 }
+            //niður
                 if (keyData == Keys.Down)
                 {
                     for (int i = 0; i < World.Length; i++)
@@ -266,6 +279,16 @@ namespace Lokaverk
                         }
                     }
                     currentY = currentY + 1;
+
+                    for (int i = 0; i < World.Length; i++)
+                    {
+                        if (World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.DarkGreen || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(86, 51, 20)
+                            || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(78, 47, 18) || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(69, 36, 14))
+                        {
+                            currentY = currentY - 1;
+                        }
+
+                    }
                     for (int i = 0; i < World.Length; i++)
                     {
                         if (World[i].Name == currentX + ":" + currentY)
@@ -273,9 +296,11 @@ namespace Lokaverk
                             World[i].BackColor = Color.Black;
 
                         }
+
                     }
                     return true;
                 }
+            //vinstri
                 if (keyData == Keys.Left)
                 {
                     for (int i = 0; i < World.Length; i++)
@@ -287,6 +312,16 @@ namespace Lokaverk
                         }
                     }
                     currentX = currentX - 1;
+
+                    for (int i = 0; i < World.Length; i++)
+                    {
+                        if (World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.DarkGreen || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(86, 51, 20)
+                            || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(78, 47, 18) || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(69, 36, 14))
+                        {
+                            currentX = currentX + 1;
+                        }
+
+                    }
                     for (int i = 0; i < World.Length; i++)
                     {
                         if (World[i].Name == currentX + ":" + currentY)
@@ -294,9 +329,11 @@ namespace Lokaverk
                             World[i].BackColor = Color.Black;
 
                         }
+
                     }
                     return true;
                 }
+            //hægri
                 if (keyData == Keys.Right)
                 {
                     for (int i = 0; i < World.Length; i++)
@@ -309,6 +346,16 @@ namespace Lokaverk
                     }
 
                     currentX = currentX + 1;
+                  
+                    for (int i = 0; i < World.Length; i++)
+                    {
+                        if (World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.DarkGreen || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(86, 51, 20)
+                            || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(78, 47, 18) || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(69, 36, 14))
+                        {
+                            currentX = currentX - 1;
+                        }
+
+                    }
                     for (int i = 0; i < World.Length; i++)
                     {
                         if (World[i].Name == currentX + ":" + currentY)
@@ -316,12 +363,19 @@ namespace Lokaverk
                             World[i].BackColor = Color.Black;
 
                         }
+
                     }
+
                     return true;
                 }
                 
 
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hermann gerði allt");
         }
 
     }
