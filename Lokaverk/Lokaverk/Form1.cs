@@ -450,7 +450,7 @@ namespace Lokaverk
                     {
                         if (tal1 == 0)
                         {
-                            if (World[i].Name == 18 + ":" + 16 || World[i].Name == 16 + ":" + 17 || World[i].Name == 17 + ":" + 17 || World[i].Name == 18 + ":" + 17
+                            if (World[i].Name == 18 + ":" + 16 && World[i].BackColor == Color.Black || World[i].Name == 16 + ":" + 17 && World[i].BackColor == Color.Black || World[i].Name == 17 + ":" + 17 && World[i].BackColor == Color.Black || World[i].Name == 18 + ":" + 17 && World[i].BackColor == Color.Black
                                 || World[i].Name == 16 + ":" + 16 && World[i].BackColor == Color.Black)
                             {
                                 RTB.Text = "HJÁÁÁÁÁÁÁÁLP";
@@ -469,6 +469,10 @@ namespace Lokaverk
                 if (keyData == Keys.J && tal1 == 2)
                 {
                     RTB.Text = "æðislegt, ég hélt ég þyrfti að gera þetta sjálfur \n " + "farðu austur og veiddu handa mér 3 Ingosilunga";
+                }
+                if (keyData == Keys.N && tal1 == 2)
+                {
+                    RTB.Text = "fine fck off";
                 }
             return base.ProcessCmdKey(ref msg, keyData);
         }
