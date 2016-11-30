@@ -276,7 +276,34 @@ namespace Lokaverk
             button2.Visible = false;
             button3.Visible = false;
             button4.Visible = false;
+            label7.Visible = true;
+            label8.Visible = true;
+            label9.Visible = true;
+            label10.Visible = true;
+            label11.Visible = true;
+            label12.Visible = true;
+            button5.Visible = true;
+
+
         }
+        //back fra hjalp
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            button1.Visible = true;
+            button2.Visible = true;
+            button3.Visible = true;
+            button4.Visible = true;
+            label7.Visible = false;
+            label8.Visible = false;
+            label9.Visible = false;
+            label10.Visible = false;
+            label11.Visible = false;
+            label12.Visible = false;
+            button5.Visible = false;
+
+        }
+
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
@@ -451,5 +478,6 @@ namespace Lokaverk
             MessageBox.Show("Hermann gerði allt");
         }
 
+       
     }
 }
