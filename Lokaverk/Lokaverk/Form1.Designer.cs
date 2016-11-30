@@ -40,6 +40,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.RTB = new System.Windows.Forms.RichTextBox();
+            this.RTB2 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -104,9 +105,9 @@
             // 
             // bits
             // 
-            this.bits.Location = new System.Drawing.Point(828, 574);
+            this.bits.Location = new System.Drawing.Point(794, 521);
             this.bits.Name = "bits";
-            this.bits.Size = new System.Drawing.Size(101, 20);
+            this.bits.Size = new System.Drawing.Size(99, 20);
             this.bits.TabIndex = 6;
             this.bits.Visible = false;
             // 
@@ -163,6 +164,15 @@
             this.RTB.Text = "";
             this.RTB.Visible = false;
             // 
+            // RTB2
+            // 
+            this.RTB2.Location = new System.Drawing.Point(511, 521);
+            this.RTB2.Name = "RTB2";
+            this.RTB2.Size = new System.Drawing.Size(132, 47);
+            this.RTB2.TabIndex = 11;
+            this.RTB2.Text = "";
+            this.RTB2.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,6 +180,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(934, 606);
+            this.Controls.Add(this.RTB2);
             this.Controls.Add(this.RTB);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -200,6 +211,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.RichTextBox RTB;
+        private System.Windows.Forms.RichTextBox RTB2;
     }
 }
 

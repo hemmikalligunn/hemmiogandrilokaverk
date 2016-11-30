@@ -14,12 +14,13 @@ namespace Lokaverk
     public partial class Form1 : Form
     {
         int teljari1 = 0, teljari2 = 0;
+        int tal1 = 0;
         int currentX = 31;
         int currentY = 20;
         int X = 0;
         int Y = 0;
         
-        //sdfjklkasdfsdajflsd
+      
 
         Button[] World = new Button[1984];
 
@@ -57,7 +58,6 @@ namespace Lokaverk
                 if (World[i].Name == currentX + ":" + currentY)
                 {
                     World[i].BackColor = Color.Black;
-
                 }
                
                 x = x + 15;
@@ -122,23 +122,28 @@ namespace Lokaverk
             bits.Text = tempButton.Name;
             if (tempButton.BackColor == Color.DarkGreen)
             {
-                 RTB.Text = "Tré";                   
+                RTB2.Clear();
+                RTB2.Text += "Tré \n";                   
             }
             if (tempButton.BackColor == Color.LightGreen)
             {
-                RTB.Text = "grass";
+                RTB2.Clear();
+                RTB2.Text += "grass \n";
             }
             if (tempButton.Text == "gamall")
             {
-                RTB.Text = "Gamall kall sem virðist vera í vanda";
+                RTB2.Clear();
+                RTB2.Text += "Gamall kall sem virðist vera í vanda \n";
             }
             if (tempButton.BackColor == Color.FromArgb(69, 36, 14) || tempButton.BackColor == Color.FromArgb(78, 47, 18) || tempButton.BackColor == Color.FromArgb(86, 51, 20))
             {
-                RTB.Text = "Lítill kofi";
+                RTB2.Clear();
+                RTB2.Text += "Lítill kofi \n";
             }
             if (tempButton.BackColor == Color.Black && tempButton.Text == "")
             {
-                RTB.Text = "Þú";
+                RTB2.Clear();
+                RTB2.Text += "Þú \n";
             }
                         
 
@@ -256,6 +261,7 @@ namespace Lokaverk
             button3.Visible = false;
             bits.Visible = true;
             RTB.Visible = true;
+            RTB2.Visible = true;
             
             CreateWorld1();
             
@@ -272,9 +278,9 @@ namespace Lokaverk
                         if (World[i].Name == currentX + ":" + currentY)
                         {
                             World[i].BackColor = Color.LightGreen;
-                            
                         }
                     }
+
                     currentY = currentY - 1;
 
 
@@ -286,19 +292,18 @@ namespace Lokaverk
                         {
                             currentY = currentY + 1;
                         }
-
                     }
+
                     for (int i = 0; i < World.Length; i++)
                     {
                         if (World[i].Name == currentX + ":" + currentY)
                         {
                             World[i].BackColor = Color.Black;
-
                         }
-
                     }
                     return true;
                 }
+
             //niður
                 if (keyData == Keys.Down)
                 {
@@ -310,6 +315,7 @@ namespace Lokaverk
 
                         }
                     }
+
                     currentY = currentY + 1;
 
                     for (int i = 0; i < World.Length; i++)
@@ -320,19 +326,18 @@ namespace Lokaverk
                         {
                             currentY = currentY - 1;
                         }
-
                     }
+
                     for (int i = 0; i < World.Length; i++)
                     {
                         if (World[i].Name == currentX + ":" + currentY)
                         {
                             World[i].BackColor = Color.Black;
-
                         }
-
                     }
                     return true;
                 }
+
             //vinstri
                 if (keyData == Keys.Left)
                 {
@@ -341,9 +346,9 @@ namespace Lokaverk
                         if (World[i].Name == currentX + ":" + currentY)
                         {
                             World[i].BackColor = Color.LightGreen;
-
                         }
                     }
+
                     currentX = currentX - 1;
 
                     for (int i = 0; i < World.Length; i++)
@@ -354,19 +359,18 @@ namespace Lokaverk
                         {
                             currentX = currentX + 1;
                         }
-
                     }
+
                     for (int i = 0; i < World.Length; i++)
                     {
                         if (World[i].Name == currentX + ":" + currentY)
                         {
                             World[i].BackColor = Color.Black;
-
                         }
-
                     }
                     return true;
                 }
+
             //hægri
                 if (keyData == Keys.Right)
                 {
@@ -375,7 +379,6 @@ namespace Lokaverk
                         if (World[i].Name == currentX + ":" + currentY)
                         {
                             World[i].BackColor = Color.LightGreen;
-
                         }
                     }
 
@@ -396,15 +399,34 @@ namespace Lokaverk
                         if (World[i].Name == currentX + ":" + currentY)
                         {
                             World[i].BackColor = Color.Black;
-
                         }
-
                     }
 
                     return true;
                 }
-                
+            //SPACEBAR
 
+                if (keyData == Keys.Space && tal1 == 0)
+                {
+                    for (int i = 0; i < World.Length; i++)
+                    {
+                        if (tal1 == 0)
+                        {
+                            if (World[i].Name == 18 + ":" + 16 || World[i].Name == 16 + ":" + 17 || World[i].Name == 17 + ":" + 17 || World[i].Name == 18 + ":" + 17
+                                || World[i].Name == 16 + ":" + 16 && World[i].BackColor == Color.Black)
+                            {
+                                RTB.Text = "HJÁÁÁÁÁÁÁÁLP";
+                                tal1 = 1;
+                            }
+                        }
+                    }
+                    return true;
+                }
+                if (keyData == Keys.Space && tal1 == 1)
+                {
+                        RTB.Text = "Ég er svangur \n" + "villtu hjálpa mér? \n";
+                        tal1++;
+                }
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
