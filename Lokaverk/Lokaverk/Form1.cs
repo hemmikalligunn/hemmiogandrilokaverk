@@ -19,6 +19,7 @@ namespace Lokaverk
         int currentY = 20;
         int X = 0;
         int Y = 0;
+        Timer t = new Timer;
         
       
 
@@ -112,6 +113,7 @@ namespace Lokaverk
             Hús1v2(5, 10);
             Hús1v1(5, 16);
             Hús1v2(12, 11);
+            Vatn(58, 4);
 
         }
 
@@ -196,6 +198,34 @@ namespace Lokaverk
                     World[i].BackColor = Color.DarkGreen;
                 }
 
+            }
+        }
+
+        //Vatn
+        public void Vatn(int x, int y)
+        {
+            for (int i = 0; i < World.Length; i++)
+            {
+                if (World[i].Name == x + ":" + y || World[i].Name == (x + 1) + ":" + y || World[i].Name == (x + 2) + ":" + y || World[i].Name == (x + 3) + ":" + y || World[i].Name == (x + 4) + ":" + y || World[i].Name == (x - 1) + ":" + y || World[i].Name == (x - 2) + ":" + y ||
+                    World[i].Name == (x - 3) + ":" + y || World[i].Name == (x - 4) + ":" + y || World[i].Name == x + ":" + (y + 1) || World[i].Name == x + ":" + (y + 2) || World[i].Name == x + ":" + (y + 3) || World[i].Name == x + ":" + (y + 4) || World[i].Name == (x + 1) + ":" + (y + 1)
+                    || World[i].Name == (x + 2) + ":" + (y + 2) || World[i].Name == (x + 3) + ":" + (y + 3) || World[i].Name == (x + 4) + ":" + (y + 4) || World[i].Name == (x - 1) + ":" + (y + 1) || World[i].Name == (x - 2) + ":" + (y + 2) || World[i].Name == (x - 3) + ":" + (y + 3)
+                    || World[i].Name == (x - 4) + ":" + (y + 4) || World[i].Name == (x + 2) + ":" + (y + 1) || World[i].Name == (x + 3) + ":" + (y + 1) || World[i].Name == (x + 4) + ":" + (y + 1) || World[i].Name == (x - 2) + ":" + (y + 1) || World[i].Name == (x - 3) + ":" + (y + 1)
+                    || World[i].Name == (x - 4) + ":" + (y + 1) || World[i].Name == (x - 1) + ":" + (y + 2) || World[i].Name == (x - 3) + ":" + (y + 2) || World[i].Name == (x - 4) + ":" + (y + 2) || World[i].Name == (x + 1) + ":" + (y + 2) || World[i].Name == (x + 3) + ":" + (y + 2)
+                    || World[i].Name == (x + 4) + ":" + (y + 2) || World[i].Name == (x - 1) + ":" + (y + 3) || World[i].Name == (x - 2) + ":" + (y + 3) || World[i].Name == (x - 4) + ":" + (y + 3) || World[i].Name == (x + 1) + ":" + (y + 3) || World[i].Name == (x + 2) + ":" + (y + 3)
+                    || World[i].Name == (x + 4) + ":" + (y + 3) || World[i].Name == (x + 1) + ":" + (y + 4) || World[i].Name == (x + 2) + ":" + (y + 4) || World[i].Name == (x + 3) + ":" + (y + 4) || World[i].Name == (x - 1) + ":" + (y + 4) || World[i].Name == (x - 2) + ":" + (y + 4)
+                    || World[i].Name == (x - 3) + ":" + (y + 4) || World[i].Name == (x - 1) + ":" + (y - 1) || World[i].Name == (x - 2) + ":" + (y - 1) || World[i].Name == (x - 3) + ":" + (y - 1) || World[i].Name == (x - 4) + ":" + (y - 1) || World[i].Name == x + ":" + (y - 1)
+                    || World[i].Name == (x + 1) + ":" + (y - 1) || World[i].Name == (x + 2) + ":" + (y - 1) || World[i].Name == (x + 3) + ":" + (y - 1) || World[i].Name == (x + 4) + ":" + (y - 1) || World[i].Name == (x - 1) + ":" + (y - 2) || World[i].Name == (x - 2) + ":" + (y - 2)
+                    || World[i].Name == (x - 3) + ":" + (y - 2) || World[i].Name == (x - 4) + ":" + (y - 2) || World[i].Name == x + ":" + (y - 2) || World[i].Name == (x + 1) + ":" + (y - 2) || World[i].Name == (x + 2) + ":" + (y - 2) || World[i].Name == (x + 3) + ":" + (y - 2)
+                    || World[i].Name == (x + 4) + ":" + (y - 2) || World[i].Name == (x - 1) + ":" + (y - 3) || World[i].Name == (x - 2) + ":" + (y - 3) || World[i].Name == (x - 3) + ":" + (y - 3) || World[i].Name == (x - 4) + ":" + (y - 3) || World[i].Name == x + ":" + (y - 3)
+                    || World[i].Name == (x + 1) + ":" + (y - 3) || World[i].Name == (x + 2) + ":" + (y - 3) || World[i].Name == (x + 3) + ":" + (y - 3) || World[i].Name == (x + 4) + ":" + (y - 3) || World[i].Name == (x - 1) + ":" + (y - 4) || World[i].Name == (x - 2) + ":" + (y - 4)
+                    || World[i].Name == (x - 3) + ":" + (y - 4) || World[i].Name == (x - 4) + ":" + (y - 4) || World[i].Name == x + ":" + (y - 4) || World[i].Name == (x + 1) + ":" + (y - 4) || World[i].Name == (x + 2) + ":" + (y - 4) || World[i].Name == (x + 3) + ":" + (y - 4)
+                    || World[i].Name == (x + 4) + ":" + (y - 4) || World[i].Name == (x - 5) + ":" + (y + 5) || World[i].Name == (x - 5) + ":" + (y + 4) || World[i].Name == (x - 4) + ":" + (y + 5) || World[i].Name == (x - 6) + ":" + (y + 6) || World[i].Name == (x - 6) + ":" + (y + 5)
+                    || World[i].Name == (x - 5) + ":" + (y + 6) || World[i].Name == (x - 5) + ":" + (y - 3) || World[i].Name == (x - 5) + ":" + (y - 2) || World[i].Name == (x - 6) + ":" + (y - 3) || World[i].Name == x + ":" + (y + 5) || World[i].Name == (x + 1) + ":" + (y + 5)
+                    || World[i].Name == (x + 2) + ":" + (y + 5) || World[i].Name == (x + 3) + ":" + (y + 5) || World[i].Name == (x + 4) + ":" + (y + 5) || World[i].Name == (x + 2) + ":" + (y + 6) || World[i].Name == (x + 3) + ":" + (y + 6) || World[i].Name == (x + 4) + ":" + (y + 6)
+                    || World[i].Name == (x + 3) + ":" + (y + 7) || World[i].Name == (x + 4) + ":" + (y + 7) || World[i].Name == (x + 4) + ":" + (y + 8))
+                {
+                    World[i].BackColor = Color.Blue;
+                }
             }
         }
 
@@ -326,7 +356,7 @@ namespace Lokaverk
                     {
                         if (World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.DarkGreen || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(86, 51, 20)
                             || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(78, 47, 18) || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(69, 36, 14)
-                            || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.Black)
+                            || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.Black || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.Blue)
                         {
                             currentY = currentY + 1;
                         }
@@ -360,7 +390,7 @@ namespace Lokaverk
                     {
                         if (World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.DarkGreen || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(86, 51, 20)
                             || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(78, 47, 18) || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(69, 36, 14)
-                            || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.Black)
+                            || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.Black || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.Blue)
                         {
                             currentY = currentY - 1;
                         }
@@ -393,7 +423,7 @@ namespace Lokaverk
                     {
                         if (World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.DarkGreen || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(86, 51, 20)
                             || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(78, 47, 18) || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(69, 36, 14)
-                            || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.Black)
+                            || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.Black || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.Blue)
                         {
                             currentX = currentX + 1;
                         }
@@ -426,7 +456,7 @@ namespace Lokaverk
                     {
                         if (World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.DarkGreen || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(86, 51, 20)
                             || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(78, 47, 18) || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.FromArgb(69, 36, 14)
-                             || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.Black)
+                             || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.Black || World[i].Name == currentX + ":" + currentY && World[i].BackColor == Color.Blue)
                         {
                             currentX = currentX - 1;
                         }
