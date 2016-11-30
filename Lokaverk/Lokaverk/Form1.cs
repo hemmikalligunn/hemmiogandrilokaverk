@@ -248,6 +248,7 @@ namespace Lokaverk
             }
         }
 
+        //start
         private void button1_Click(object sender, EventArgs e)
         {
             label1.Visible = true;
@@ -258,6 +259,7 @@ namespace Lokaverk
             label6.Visible = true;
             button1.Visible = false;
             button2.Visible = false;
+            button4.Visible = false;
             button3.Visible = false;
             bits.Visible = true;
             RTB.Visible = true;
@@ -265,6 +267,15 @@ namespace Lokaverk
             
             CreateWorld1();
             
+        }
+
+        //hjalp
+        private void button4_Click(object sender, EventArgs e)
+        {
+            button1.Visible = false;
+            button2.Visible = false;
+            button3.Visible = false;
+            button4.Visible = false;
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -401,9 +412,9 @@ namespace Lokaverk
                             World[i].BackColor = Color.Black;
                         }
                     }
-
                     return true;
                 }
+
             //SPACEBAR
 
                 if (keyData == Keys.Space && tal1 == 0)
@@ -424,8 +435,13 @@ namespace Lokaverk
                 }
                 if (keyData == Keys.Space && tal1 == 1)
                 {
-                        RTB.Text = "Ég er svangur \n" + "villtu hjálpa mér? \n";
-                        tal1++;
+                    RTB.Text = "Ég er svangur \n" + "villtu hjálpa mér? \n";
+                    tal1 = 2;
+                }
+
+                if (keyData == Keys.J && tal1 == 2)
+                {
+                    RTB.Text = "æðislegt, ég hélt ég þyrfti að gera þetta sjálfur \n " + "farðu austur og veiddu handa mér 3 Ingosilunga";
                 }
             return base.ProcessCmdKey(ref msg, keyData);
         }
