@@ -19,7 +19,7 @@ namespace Lokaverk
         int currentY = 20;
         int X = 0;
         int Y = 0;
-        Timer t = new Timer;
+     //  Timer t = new Timer;
         
       
 
@@ -114,6 +114,7 @@ namespace Lokaverk
             Hús1v1(5, 16);
             Hús1v2(12, 11);
             Vatn(58, 4);
+            Brú(57,9);
 
         }
 
@@ -147,11 +148,16 @@ namespace Lokaverk
                 RTB2.Clear();
                 RTB2.Text += "Þú \n";
             }
-                        
+            if (tempButton.BackColor == Color.Blue && tempButton.Text == "")
+            {
+                RTB2.Clear();
+                RTB2.Text += "vatn \n";
+            }
 
-            
-            
-        
+
+
+
+
         }
         //MapDesignTools
 
@@ -275,6 +281,18 @@ namespace Lokaverk
                     World[i].BackColor = Color.FromArgb(86, 51, 20);
                 }
 
+            }
+        }
+        //brú 
+
+        public void Brú(int x, int y)
+        {
+            for (int i = 0; i < World.Length; i++)
+            {
+                if (World[i].Name == x + ":" + (y-1) || World[i].Name == x + ":" + (y-2) || World[i].Name == x + ":" + (y-3))
+                {
+                    World[i].BackColor = Color.Brown;
+                }
             }
         }
 
@@ -471,6 +489,7 @@ namespace Lokaverk
                     }
                     return true;
                 }
+               
 
             //SPACEBAR
 
@@ -498,7 +517,7 @@ namespace Lokaverk
 
                 if (keyData == Keys.J && tal1 == 2)
                 {
-                    RTB.Text = "æðislegt, ég hélt ég þyrfti að gera þetta sjálfur \n " + "farðu austur og veiddu handa mér 3 Ingosilunga";
+                    RTB.Text = "æðislegt, ég hélt ég þyrfti að gera þetta sjálfur \n " + "farðu austur og veiddu handa mér 3 Ingosilunga \n " +"ég skal gefa þér verðlaun (gamli maðurinn blikkar einu auganu) ";
                 }
                 if (keyData == Keys.N && tal1 == 2)
                 {
