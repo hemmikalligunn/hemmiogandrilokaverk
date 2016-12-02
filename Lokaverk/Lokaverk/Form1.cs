@@ -23,6 +23,9 @@ namespace Lokaverk
         int basemovementspeed = 1;
         int ja = 0;
         int nei = 0;
+        int tikk = 0;
+        int tikk2 = 0;
+
         System.DateTime moment = new System.DateTime(1, 1, 1, 1, 1, 1, 1);
       
         Random rand = new Random();
@@ -644,9 +647,8 @@ namespace Lokaverk
        
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
-            
-            
+            tikk = rand.Next(0, 2);
+            tikk2 = rand.Next(0, 2);  
         }
 
        
