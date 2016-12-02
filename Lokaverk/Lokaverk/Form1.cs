@@ -380,6 +380,7 @@ namespace Lokaverk
             RTB2.Visible = true;
             timer1.Start();
             CreateWorld1();
+            AI();
             
         }
 
@@ -648,6 +649,14 @@ namespace Lokaverk
             MessageBox.Show("Forritarar: \n Hermann Karl Gunnarsson \n Andri Snær Brynjarsson");
         }
        
+        private void AI()
+        {
+            Kú(33, 5);
+
+
+
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             tikk = rand.Next(0, 2);
