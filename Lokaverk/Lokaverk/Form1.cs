@@ -601,7 +601,7 @@ namespace Lokaverk
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hermann gerði allt");
+            MessageBox.Show("Forritarar: \nAndri Snær Brynjarsson \nHerman Gunnar Karlsson ");
         }
 
        
