@@ -148,11 +148,7 @@ namespace Lokaverk
                 RTB2.Clear();
                 RTB2.Text += "grass \n";
             }
-            if (tempButton.Text == "gamall")
-            {
-                RTB2.Clear();
-                RTB2.Text += "Gamall kall sem virðist vera í vanda \n";
-            }
+            
             if (tempButton.BackColor == Color.FromArgb(69, 36, 14) || tempButton.BackColor == Color.FromArgb(78, 47, 18) || tempButton.BackColor == Color.FromArgb(86, 51, 20))
             {
                 RTB2.Clear();
@@ -162,6 +158,11 @@ namespace Lokaverk
             {
                 RTB2.Clear();
                 RTB2.Text += "Þú \n";
+            }
+            if (tempButton.BackColor == Color.Black && tempButton.Text == "gamall")
+            {
+                RTB2.Clear();
+                RTB2.Text += "Gamall kall sem virðist vera í vanda \n";
             }
             if (tempButton.BackColor == Color.Blue)
             {
