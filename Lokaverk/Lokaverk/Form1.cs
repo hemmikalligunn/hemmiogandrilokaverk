@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
+
 namespace Lokaverk
 {
     public partial class Form1 : Form
@@ -22,7 +23,9 @@ namespace Lokaverk
         int basemovementspeed = 1;
         int ja = 0;
         int nei = 0;
-     //  Timer t = new Timer;
+        System.DateTime moment = new System.DateTime(1, 1, 1, 1, 1, 1, 1);
+      
+        Random rand = new Random();
         
       
 
@@ -123,6 +126,7 @@ namespace Lokaverk
             Hús1v2(12, 11);
             Vatn(58, 4);
             Brú(57,9);
+            Kú(33, 5);
 
         }
 
@@ -151,15 +155,20 @@ namespace Lokaverk
                 RTB2.Clear();
                 RTB2.Text += "Lítill kofi \n";
             }
-            if (tempButton.BackColor == Color.Black && tempButton.Text == "")
+            if (tempButton.BackColor == Color.Black)
             {
                 RTB2.Clear();
                 RTB2.Text += "Þú \n";
             }
-            if (tempButton.BackColor == Color.Blue && tempButton.Text == "")
+            if (tempButton.BackColor == Color.Blue)
             {
                 RTB2.Clear();
                 RTB2.Text += "vatn \n";
+            }
+            if (tempButton.BackColor == Color.Brown)
+            {
+                RTB2.Clear();
+                RTB2.Text += "Brú \n";
             }
 
 
@@ -313,9 +322,38 @@ namespace Lokaverk
                     World[i].BackColor = Color.Brown;
                     World[i].Text = "brown";
                     World[i].ForeColor = World[i].BackColor;
+                    
                    
                 }
             }
+        }
+
+        //ai
+ 
+        //kú
+
+        public void Kú(int x, int y)
+        {
+            int second = moment.Second;
+
+            for (int i = 0; i < World.Length; i++)
+            {
+                if (World[i].Name == x+":"+y)
+                {
+                    World[i].BackColor = Color.White;
+                    World[i].ForeColor = World[i].BackColor;
+
+                }
+                if (World[i].Name == (x-1) + ":" + y)
+                {
+                    World[i].BackColor = Color.Black;
+                    World[i].ForeColor = World[i].BackColor;
+                }
+            
+            }
+           
+            
+            
         }
 
         //start
@@ -334,7 +372,7 @@ namespace Lokaverk
             bits.Visible = true;
             RTB.Visible = true;
             RTB2.Visible = true;
-            
+            timer1.Start();
             CreateWorld1();
             
         }
@@ -601,7 +639,14 @@ namespace Lokaverk
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Forritarar: \nAndri Snær Brynjarsson \nHerman Gunnar Karlsson ");
+            MessageBox.Show("Forritarar: \n Hermann Karl Gunnarsson \n Andri Snær Brynjarsson");
+        }
+       
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            
+            
+            
         }
 
        
