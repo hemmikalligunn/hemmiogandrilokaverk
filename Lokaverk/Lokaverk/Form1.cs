@@ -344,16 +344,19 @@ namespace Lokaverk
                 if (World[i].Name == x+":"+y)
                 {
                     World[i].BackColor = Color.White;
+                    World[i].Text = "kú";                    
                     World[i].ForeColor = World[i].BackColor;
 
                 }
                 if (World[i].Name == (x-1) + ":" + y)
                 {
                     World[i].BackColor = Color.Black;
+                    World[i].Text = "kú1";
                     World[i].ForeColor = World[i].BackColor;
                 }
             
             }
+
            
             
             
