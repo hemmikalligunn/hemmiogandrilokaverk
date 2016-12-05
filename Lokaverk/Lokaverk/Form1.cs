@@ -25,6 +25,7 @@ namespace Lokaverk
         int nei = 0;
         int tikk = 0;
         int tikk2 = 0;
+        int ingosilungar = 0;
 
         System.DateTime moment = new System.DateTime(1, 1, 1, 1, 1, 1, 1);
       
@@ -608,7 +609,27 @@ namespace Lokaverk
                
 
             //SPACEBAR
-
+                if (keyData == Keys.Space  && tal1 == 3 && ja == 1)
+                {
+                    RTB.Clear();
+                    for (int i = 0; i < World.Length; i++)
+                    {
+                        if (World[i].Name == 57 + ":" + 6 && World[i].BackColor == Color.Black)
+                        {
+                            tikk2 = rand.Next(1,6);
+                            if (tikk2 == 1)
+                            {
+                                RTB.Text += "Þú náðir einum Ingosilung";
+                                ingosilungar++;
+                                label2.Text = ingosilungar.ToString();
+                            }
+                           else
+                            {
+                                RTB.Text += "Þú náðir eingu";
+                            }
+                        }
+                    }
+                }
                 if (keyData == Keys.Space && tal1 == 0)
                 {
                     for (int i = 0; i < World.Length; i++)
@@ -627,12 +648,15 @@ namespace Lokaverk
                 }
                 if (keyData == Keys.Space && tal1 == 1)
                 {
+
                     RTB.Text = "Ég er svangur \n" + "villtu hjálpa mér? \n";
                     tal1 = 2;
                 }
 
                 if (keyData == Keys.J && tal1 == 2)
                 {
+                    ja++;
+                    tal1++;
                     RTB.Text = "æðislegt, ég hélt ég þyrfti að gera þetta sjálfur \n " + 
                         "farðu austur og veiddu handa mér 3 Ingosilunga á brúnni á bryggjunni \n " 
                         +"ég skal gefa þér verðlaun (gamli maðurinn blikkar einu auga) ";
@@ -640,8 +664,16 @@ namespace Lokaverk
                 }
                 if (keyData == Keys.N && tal1 == 2)
                 {
+                    tal1++;
                     RTB.Text = "argasti dónaskapur";
                 }
+                if (keyData == Keys.Space && tal1 == 3 && ingosilungar >= 3)
+                {
+                    RTB.Text = "ummmm nom nom nom þetta eru fínir fiskar hér er súkkulaði ;) ";
+                    
+                }
+                       
+            
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
@@ -661,7 +693,7 @@ namespace Lokaverk
         private void timer1_Tick(object sender, EventArgs e)
         {
             tikk = rand.Next(0, 2);
-            tikk2 = rand.Next(0, 2);  
+           
         }
 
        
